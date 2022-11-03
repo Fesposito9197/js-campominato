@@ -17,33 +17,23 @@ function renderBoard(container , cellNumber) {
                     
                     document.querySelector('.board .cell:nth-child('+bomb[i]+')').classList.add('bomb')
                 }
-                
-                // tolgo eventlistener dal boardcell
-                
             }else{
                 if (!(this.classList.contains("number-selected"))) {
                     userClick += 1
                     this.classList.add("number-selected")
                 }
-                
-               
                 userPoint.innerHTML = userClick
                 
                 if (userClick === goodCell){
                     alert("HAI VINTO")
                 }
             }
-
-            
-            
-                
-                
         })
         container.append(boardCell);
     }
 }
-
-
+                
+                
 let bomb = []
 let goodCell = 0
 
@@ -71,22 +61,3 @@ play.addEventListener("click" , function() {
     userClick = 0
     renderBoard(boardContainer , levelVal)
 })
-        
-    
-
-
-        
-                
-            
-
-
-
-    
-   
-    
-
-
-   
-    
-    
-    
