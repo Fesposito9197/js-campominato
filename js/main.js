@@ -21,12 +21,16 @@ function renderBoard(container , cellNumber) {
                 // tolgo eventlistener dal boardcell
                 
             }else{
-                userClick += 1
-                this.classList.add("number-selected")
+                if (!(this.classList.contains("number-selected"))) {
+                    userClick += 1
+                    this.classList.add("number-selected")
+                }
+                console.log(this)
+               
                 userPoint.innerHTML = userClick
                 console.log(goodCell)
                 if (userClick === goodCell){
-                    alert("HAi VINTO")
+                    alert("HAI VINTO")
                 }
             }
 
@@ -52,17 +56,17 @@ let userClick = 0
 play.addEventListener("click" , function() {
     const levelVal = Number(document.getElementById('level').value);
     goodCell = levelVal - 16
-    
+    bomb = []
     userPoint.innerHTML = 0
     console.log(levelVal);
     while (bomb.length < 16 ) {
         let generatedNumber = getRndInteger(1 , levelVal)
-        debugger
+        
         if (bomb.includes(generatedNumber) == false) {
             bomb.push(generatedNumber)
         }
     }
-console.log(bomb)
+    console.log(bomb)
     boardContainer.innerHTML=""
     userClick = 0
     renderBoard(boardContainer , levelVal)
