@@ -24,7 +24,12 @@ main{
     flex-grow: 1;
     
 }
-
+.d-block{
+    display: block;
+}
+.d-none{
+    display: none;
+}
 
 
 .board{
