@@ -17,7 +17,7 @@ function renderBoard(container , cellNumber) {
                 
                 for (let i = 0; i < bomb.length; i++) {
                     gameOver = true
-                    document.querySelector('.board .cell:nth-child('+bomb[i]+')').classList.add('bomb')
+                    document.querySelector(' .cell:nth-child('+bomb[i]+')').classList.add('bomb')
                     userPoint.innerHTML = `Hai perso il tuo punteggio era di ${userClick}`
                     userPoint.classList.remove("d-none")
 
